@@ -16,13 +16,13 @@
       <div class="cart">
         {% with total_items=cart|length %}
           {% if cart|length > 0 %}
-            Your cart:
+            你的購物車中:
             <a href="{% url "cart:cart_detail" %}">
-              {{ total_items }} item{{ total_items|pluralize }},
+              {{ total_items }} 樣商品,
               ${{ cart.get_total_price }}
             </a>
           {% else %}
-          Your cart is empty.
+          購物車中沒有東西。
           {% endif %}
         {% endwith %}
       </div>
